@@ -321,7 +321,7 @@ public class CommandLineApp {
         return o;
     }
 
-    private static class TableExtractor {
+    public static class TableExtractor {
         private boolean guess = false;
         private boolean useLineReturns = false;
         private BasicExtractionAlgorithm basicExtractor = new BasicExtractionAlgorithm();
@@ -424,7 +424,7 @@ public class CommandLineApp {
         return pdfFile.getPath().replaceFirst("(\\.pdf|)$", extension);
     }
 
-    private enum OutputFormat {
+    public enum OutputFormat {
         CSV,
         TSV,
         JSON;
@@ -439,7 +439,7 @@ public class CommandLineApp {
         }
     }
 
-    private enum ExtractionMethod {
+    public enum ExtractionMethod {
         BASIC,
         SPREADSHEET,
         DECIDE
